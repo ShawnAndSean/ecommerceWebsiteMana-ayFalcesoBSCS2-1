@@ -1,0 +1,303 @@
+@import 'nav.css';
+@import 'footer.css';
+.hero-section {
+    margin: 80px 0;
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url('../images/header.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .logo {
+    display: block;
+    margin: auto;
+}
+
+.hero-section .sub-heading {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.product-category {
+    padding: 0 5vw;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.product-container {
+    padding: 0 5vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 600px;
+    height: 500px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.product-image {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-thumb {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.discount-tag {
+    position: absolute;
+    background: #23523924;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 40px;
+    top: 40px;
+    text-transform: capitalize;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background: #efefef;
+}
+
+.product-info {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+.product-brand {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.product-short-des {
+    font-size: 12px;
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.actual-price {
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 5vw;
+    height: 100%;
+    position: absolute;
+    ;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn {
+    right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+    opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    opacity: 1;
+}
+
+
+/* collections */
+
+.collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 2vw 4vw;
+}
+
+.collections {
+    position: relative;
+}
+
+.collections img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collections p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.front-page-container {
+    margin: 5% 3%;
+}
+
+.banner {
+    margin: 2% 3%;
+}
+
+.banner h1,
+.front-page-3 .sports-text {
+    font-size: 1.2rem;
+}
+
+img,
+video {
+    max-width: 100%;
+    padding: 10px 0;
+}
+
+.front-page-1 h1 {
+    margin-top: 30px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px #F73D93;
+}
+
+.col-2 {
+    flex-basis: 20%;
+    font-size: 1.5rem;
+}
+
+.col-3 {
+    flex-basis: 33%;
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #F73D93;
+    color: #fff;
+    font-size: 5px;
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+.video-container video,
+.front-page-5 img {
+    min-width: 100%
+}
+
+@media (max-width: 991.98px) {
+    .banner {
+        margin: 3% 5%;
+    }
+    .banner-info h1 {
+        font-size: 2.5rem;
+    }
+    .col-lg-6,
+    .sports-text,
+    .gender h1,
+    .title-left h1 {
+        font-size: 1rem;
+    }
+    .front-page-4 .btn {
+        border-radius: 20px;
+        size: 10%;
+    }
+    .front-page-container {
+        padding-top: 1rem;
+    }
+    .btn {
+        font-size: 5px;
+        padding: 2px 10px;
+    }
+}
+
+.gender-banner-image {
+    max-width: 100%;
+}
+
+.gender-button {
+    text-align: center;
+}
+
+.gender-button a {
+    background: #F73D93;
+    text-decoration: none;
+    text-style: bold;
+    color: #F73D93;
+}
